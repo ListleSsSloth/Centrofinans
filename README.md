@@ -1,1 +1,1 @@
-[OfficeChecker1.exe](./OfficeChecker.exe)утилита для проверки основных пунктов тех подготовки офиса
+[OfficeChecker.exe][](./OfficeChecker.exe)утилита для проверки основных пунктов тех подготовки офиса
