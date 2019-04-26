@@ -1,0 +1,78 @@
+﻿<Window x:Class="OfficeCheckerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficeCheckerWPF"
+        mc:Ignorable="d"
+        Name="StartWindow" Height="515" Width="700" Loaded="WindowLoaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Closing="MainWindowOnClosing">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE864F5" Offset="0"/>
+            <GradientStop Color="#FF8FFBF6" Offset="1"/>
+            <GradientStop Color="#FF9EDFF5" Offset="0.742"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="Настройка потока iSpy" Click="OptionsISpyOnClick"/>
+            <MenuItem Header="Инструменты">
+                <MenuItem Header="Очистка AppData от iSpy" Click="ToolsClearAllAppDataClick"/>
+                <MenuItem Name="ConsoleMenuItem" Header="Консоль" Visibility="Collapsed" Click="ToolsConsoleMenuItemOnClick"/>
+            </MenuItem>
+            <MenuItem Header="Информация">
+                <!--<MenuItem Header="История изменений" Click="MenuItemNewInPatchClick"/>-->
+                <Separator/>
+                <MenuItem Header="О программе" Click="MenuItemAboutOnClick"/>
+            </MenuItem>
+        </Menu>
+        
+        <GroupBox Header="Программы" Margin="5" Grid.Row="1" Grid.Column="0">
+            <StackPanel Name="SoftCheckBoxStack" Height="auto" Width="auto"/>
+        </GroupBox>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <GroupBox Header="Службы" Margin="5">
+                <StackPanel Name="ServiceStack" Height="auto" Width="auto"/>
+            </GroupBox>
+            <GroupBox Header="Сеть" Margin="5,5,5,5" Padding="3" Height="135">
+                <Grid Name="NetworkGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Name="NetworkStack" Height="auto" Width="auto" Orientation="Vertical">
+                        <ProgressBar Name="NetworkProgressBar" Height="3" Margin="2,2,2,0"/>
+                        <Label Name="NetworkStatusLabel" Margin="2,0,2,2"/>
+                        <TextBlock Name="NetworkInfoTextBlock" TextAlignment="Left" TextWrapping="Wrap" Margin="2"/>
+                    </StackPanel>
+                    <Button Grid.Row="1" Padding="5,2" Name="NetworkStartTestButton" Content="Диагностика" HorizontalAlignment="Center"
+                            Click="NetworkStartTestButtonClick"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+        <GroupBox Header="Информация о ПК" Margin="5" Grid.Row="1" Grid.Column="2">
+            <TextBlock Name="PcInfoTextBlock" TextAlignment="Left" Margin="5" FontSize="13" TextWrapping="Wrap"/>
+        </GroupBox>
+        <TextBlock Name="InfoTextBlock" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Grid.ColumnSpan="3"
+                   TextAlignment="Left" Margin="15,5,5,5" FontSize="14"/>
+        <Button Name="GoButton" Content="Общий тест" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="5" Padding="5,2"
+                Click="StartButtonClick"/>
+        <ProgressBar Name="MainCheckProgressBar" IsIndeterminate="True" Grid.Row="5" Height="3" Grid.Column="0"
+                     Grid.ColumnSpan="3" Margin="5" Visibility="Collapsed"/>
+
+    </Grid>
+</Window>

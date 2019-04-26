@@ -1,0 +1,220 @@
+﻿<Window x:Class="OfficeCheckerWPF.HistoryOfChangesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficeCheckerWPF"
+        mc:Ignorable="d"
+        Title="История изменений" Height="350" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <ScrollViewer Padding="2">
+            <StackPanel  CanVerticallyScroll="True">
+                
+                <!-- Версия 3.0 -->
+                <TextBlock  TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Базовая версия, в которой реализована проверка главных компонентов ПО и служб Windows.
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Так же присутствует проверка сертификата VPN, текущего пользователя и соответствия стандартам имени ПК
+                </TextBlock>
+                
+                <!-- Версия 3.1 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.1
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлен тестовый инструмент для настройки потока iSpy, резервного копирования
+                    и восстановления конфигурации iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Настройка потока доступна для двух камер: Vstarcam и Polyvision
+                </TextBlock>
+                
+                <!-- Версия 3.2 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.2
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлены ошибки интерфейса.
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Настройка потока iSpy доступна для пяти камер: Vstarcam, Polyvision, Foscam, FalconEye, FalconEye HD
+                </TextBlock>
+                
+                <!-- Версия 3.3 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.3
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлена ошибка с настройкой потока камеры Polyvision
+                </TextBlock>
+
+                <!-- Версия 3.4 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.4
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Пункт меню "Нового в этой версии" заменен пунктом "История изменений"
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлено автоматическое закрытие iSpy, если данное действие необходимо
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлена кнопка для запуска iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлена проверка на доступность камеры по указанному IP адресу
+                </TextBlock>
+
+                <!-- Версия 3.5 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.5
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлена ошибка приводящая к бесконечным попыткам закрыть iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлена ошибка приводящая к исключению при отсутсвии объектов в iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Оптимизировано поле для ввода IP адреса камеры
+                </TextBlock>
+
+                <!-- Версия 3.6 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.6
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлена ошибка с запуском iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Актуализирована проверяемая версия тонкого клиента 1с8 (8.3.10.2667)
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлена проверка установки Salt Minion
+                </TextBlock>
+
+                <!-- Версия 3.7 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.7
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Изменено формирование потоков MJPEG
+                </TextBlock>
+
+                <!-- Версия 3.8 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 3.8
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Убрано управление Службой удаленных рабочих столов
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Изменен механизм проверки доступности камеры в окне настроек iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Инструмент для настройки потоков камер вынесен на панель управления отдельным пунктом 
+                </TextBlock>
+
+                <!-- Версия 4.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Глобальаня переработка
+                </TextBlock>
+
+                <!-- Версия 4.1 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.1
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Графические изменения
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Актуализирована проверяемая версия iSpyController (19.03.2018)
+                </TextBlock>
+
+                <!-- Версия 4.2 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.2
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Актуализирована проверяемая версия iSpyController (26.03.2018)
+                </TextBlock>
+
+                <!-- Версия 4.3 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.3
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Актуализирована проверяемая версия iSpyController (29.03.2018)
+                </TextBlock>
+
+                <!-- Версия 4.4 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.4
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Изменен механизм диагностики сети
+                </TextBlock>
+
+                <!-- Версия 4.5.0.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.5.0.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлен инструмент для очистки AppData всех пользователей от файлов iSpy
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлено подтверждение при восстановлении настроек iSpy
+                </TextBlock>
+
+                <!-- Версия 4.6.3.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.6.3.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлена защита паролем
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлена проверка на корректное создание пользователя
+                </TextBlock>
+
+                <!-- Версия 4.7.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.7.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Исправлен недочет с полем ввода пароля
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Изменена проверка актуальности версии ISC в связи с изменением системы обозначения версий(ревизия не учитывается при проверке)
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавлен административный запуск. Более запускать от администратора не требуется
+                </TextBlock>
+
+                <!-- Версия 4.8.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.8.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавленп поток для камеры Vstarcam C8824WIP
+                </TextBlock>
+
+                <!-- Версия 4.10.0 -->
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="Red" FontSize="14">
+                    Версия 4.10.0
+                </TextBlock>
+                <TextBlock Padding="3,0" TextWrapping="Wrap" Foreground="Black" FontSize="12">
+                    Добавленп поток для камер D-Link DCS-5030L и TP-Link NC450
+                </TextBlock>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

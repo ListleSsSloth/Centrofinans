@@ -1,0 +1,114 @@
+﻿<Window x:Class="OfficeCheckerWPF.SpyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficeCheckerWPF"
+        mc:Ignorable="d"
+        Title="Настройка iSpy" Width="215" Height="350" ResizeMode="NoResize" Loaded="WindowLoaded" WindowStartupLocation="CenterOwner">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE864F5" Offset="0"/>
+            <GradientStop Color="#FF8FFBF6" Offset="1"/>
+            <GradientStop Color="#FF9EDFF5" Offset="0.742"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Параметры камеры" Grid.Row="0" Margin="3">
+            <StackPanel>
+                <ComboBox Name="CamModelBox" Margin="3" SelectedIndex="0" HorizontalContentAlignment="Center"/>
+                <!--IP BOX-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+                    <TextBox Name="IpBox1" Margin="3" Padding="3,2" Text="192" TextAlignment="Center" MaxLength="3" Width="35" PreviewTextInput="IpBoxInputControl" GotFocus="IpBoxGotFocus"/>
+                    <TextBlock VerticalAlignment="Bottom" FontSize="20">
+                        <TextBlock.Text>
+                            .
+                        </TextBlock.Text>
+                    </TextBlock>
+                    <TextBox Name="IpBox2" Margin="3" Padding="3,2" Text="168" TextAlignment="Center" MaxLength="3" Width="35" PreviewTextInput="IpBoxInputControl" GotFocus="IpBoxGotFocus"/>
+                    <TextBlock VerticalAlignment="Bottom" FontSize="20">
+                        <TextBlock.Text>
+                            .
+                        </TextBlock.Text>
+                    </TextBlock>
+                    <TextBox Name="IpBox3" Margin="3" Padding="3,2" Text="180" TextAlignment="Center" MaxLength="3" Width="35" PreviewTextInput="IpBoxInputControl" GotFocus="IpBoxGotFocus"/>
+                    <TextBlock VerticalAlignment="Bottom" FontSize="20">
+                        <TextBlock.Text>
+                            .
+                        </TextBlock.Text>
+                    </TextBlock>
+                    <TextBox Name="IpBox4" Margin="3" Padding="3,2" Text="3" TextAlignment="Center" MaxLength="3" Width="35" PreviewTextInput="IpBoxInputControl" GotFocus="IpBoxGotFocus"/>
+                </StackPanel>
+                
+                <TextBox   Name="CamLoginTextBox" Margin="3" Padding="5,2" Text="admin" TextAlignment="Center" MaxLength="20">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Center" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="Логин" Foreground="Gainsboro" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <TextBox Name="CamPasswordTextBox" Margin="3" Padding="5,2" Text="" TextAlignment="Center" MaxLength="20">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Center" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="Пароль" Foreground="Gainsboro" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </StackPanel>
+        </GroupBox>
+
+        <Label Name="CameraAccessLabel" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+
+        <StackPanel Grid.Row="2" Margin="5,5,5,0">
+            <Button Name="StartISpyButton" Margin="3" Content="Запустить iSpy" Visibility="Collapsed" Click="StartISpyButtonClick"/>
+            <Button Name="BaseTestButton" Margin="3" Content="Проверка установки iSpy" Click="BaseTestButtonClick"/>
+            <Button Name="LookSourceButon" Margin="3" Content="Текущий поток" Click="LookSourceButonClick"/>
+            <Button Name="XmlSettingButton" Margin="3" Content="Настроить поток" Click="XmlSettingButtonClick"/>
+            <Button Name="BackupSettingButton" Margin="3" Content="Backup настроек" Click="BackupSettingButtonClick"/>
+            <Button Name="BackupRestoreSettingButton" Margin="3" Content="Восстановление настроек" Click="BackupRestoreSettingButtonClick"/>
+        </StackPanel>
+
+        <ProgressBar Grid.Row="3" Name="RunningProgressBar" Height="3" IsIndeterminate="True" Margin="8,1" Visibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="OfficeCheckerWPF.LogConsole"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficeCheckerWPF"
+        mc:Ignorable="d"
+        Title="Консоль" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Height="500" Width="800"
+        Closing="LogConsoleOnClosing">
+    <Grid>
+        <ScrollViewer Name="Scroller" Margin="0" Background="#2E2C29">
+            <TextBlock Name="OutputBlock"  Foreground="LightGray" FontFamily="Consolas" Padding="10" TextWrapping="Wrap"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
