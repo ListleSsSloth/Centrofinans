@@ -1,4 +1,4 @@
-﻿﻿using System;111111222222222
+﻿﻿using System;
 using System.Windows;
 
 namespace OfficeCheckerWPF
