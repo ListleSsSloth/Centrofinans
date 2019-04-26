@@ -1,4 +1,4 @@
-﻿namespace OfficeCheckerWPF
+﻿namespace OfficeCheckerWPF123123123
 {
     internal class Camera
     {
